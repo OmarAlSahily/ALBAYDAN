@@ -1,296 +1,254 @@
-/* --- الهوية البصرية والألوان --- */
+/* الإعدادات العامة */
 :root {
-    --primary-blue: #1E4D8C; /* لون شعارك الأساسي */
-    --dark-navy: #0F172A;
-    --light-bg: #F8FAFC;
+    --blue: #1E4D8C;
+    --navy: #0F172A;
     --white: #ffffff;
+    --gray: #f4f4f4;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: var(--light-bg);
-    color: var(--dark-navy);
+    direction: rtl;
+    text-align: right;
+    color: var(--navy);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* --- شريط التنقل (Navbar) --- */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* الهيدر والشعار */
 .navbar {
     background: var(--white);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-bottom: 4px solid var(--blue);
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 4px solid var(--primary-blue);
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* مساحة متوازنة */
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
+    padding: 0 20px;
 }
 
-/* --- تكبير الشعار --- */
-.logo-box img { 
-    height: 100px; /* حجم كبير وواضح */
+.logo-box img {
+    height: 90px; /* شعار كبير وواضح */
     width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-box img:hover {
-    transform: scale(1.05);
-}
-
-.mobile-menu-btn {
-    font-size: 1.8rem;
-    color: var(--primary-blue);
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
 .nav-links {
-    display: none; /* مخفي في الموبايل ويظهر بالـ JS */
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* يبدأ بعد الهيدر مباشرة */
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-}
-
-.nav-links.show {
     display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark-navy);
+    color: var(--navy);
     font-weight: 700;
-    padding: 15px;
-    font-size: 1.1rem;
-    border-bottom: 1px solid #eee;
+    transition: 0.3s;
 }
 
-/* --- السلايدر (Hero) --- */
-.hero-slider {
-    height: 65vh;
+.nav-links a:hover { color: var(--blue); }
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--blue);
+}
+
+/* السلايدر */
+.slider {
+    height: 60vh;
     position: relative;
-    background: #000;
+    overflow: hidden;
 }
 
 .slide {
     position: absolute;
     inset: 0;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
-    text-align: center;
+    opacity: 0;
+    transition: 1s ease;
 }
 
 .slide.active { opacity: 1; }
 
-.hero-text h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-    margin-bottom: 10px;
+.slide-content {
+    text-align: center;
+    color: var(--white);
 }
 
-.hero-text p {
-    font-size: 1.2rem;
-    background: rgba(30, 77, 140, 0.6);
-    padding: 5px 15px;
-    border-radius: 8px;
-    display: inline-block;
-}
+.slide-content h1 { font-size: 2.5rem; font-weight: 900; }
 
-/* --- شريط ساعات العمل --- */
-.working-hours-strip {
-    background: var(--primary-blue);
+/* شريط العمل */
+.work-bar {
+    background: var(--blue);
     color: var(--white);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 30px;
     padding: 15px;
-    gap: 10px;
     font-weight: 700;
 }
 
-/* --- قسم المقولة والوكالات --- */
-.quote-box {
+/* المقولة والمميزات */
+.section { padding: 60px 0; }
+.bg-light { background: var(--gray); }
+
+.quote-area {
     text-align: center;
-    padding: 40px 20px;
+    margin-bottom: 40px;
 }
 
-.quote-box blockquote {
-    font-size: 1.4rem;
+.main-quote {
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: var(--blue);
     max-width: 800px;
     margin: auto;
-    position: relative;
 }
 
-.separator {
-    width: 80px;
-    height: 5px;
-    background: var(--primary-blue);
-    margin: 25px auto;
-    border-radius: 10px;
+.quote-icon { font-size: 2rem; color: #ddd; margin-bottom: 10px; }
+
+.line {
+    width: 60px;
+    height: 4px;
+    background: var(--blue);
+    margin: 20px auto;
 }
 
-.section-heading {
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 900;
-    margin-bottom: 30px;
 }
+
+.feature-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feature-card i { font-size: 2.5rem; color: var(--blue); margin-bottom: 10px; }
+
+/* الوكالات */
+.title { text-align: center; margin-bottom: 40px; font-weight: 900; font-size: 2rem; }
 
 .brands-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* عمودين في الموبايل */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    padding: 10px;
 }
 
-.brand-card {
-    background: var(--white);
+.brand-item {
+    background: white;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 15px;
     text-align: center;
 }
 
-.brand-card img {
-    max-height: 50px;
-    width: auto;
-    margin-bottom: 10px;
+.brand-item img { max-height: 50px; margin-bottom: 10px; }
+.text-brand { font-weight: 900; font-size: 1.2rem; margin-bottom: 10px; }
+
+/* اتصل بنا */
+.dark-section { background: var(--navy); color: white; }
+.text-white { color: white; }
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-/* --- اتصل بنا (حيوية الموبايل) --- */
-.contact-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.contact-card {
-    background: rgba(255,255,255,0.1);
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.phone-link {
+.btn-phone {
     display: block;
-    font-size: 1.6rem;
-    font-weight: 900;
-    color: var(--white);
+    background: none;
+    border: 2px solid var(--blue);
+    color: white;
+    padding: 15px;
     margin: 10px 0;
     text-decoration: none;
-    border: 2px solid var(--primary-blue);
-    padding: 10px;
-    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.social-flex {
+.social-btns {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin: 20px 0;
 }
 
-.social-btn {
-    padding: 20px;
-    border-radius: 15px;
+.social-link {
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
-    font-weight: 900;
     text-decoration: none;
-    color: var(--white);
-    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
 }
 
-.whatsapp { background: #25D366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-.facebook { background: #1877F2; box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3); }
+.wa { background: #25D366; }
+.fb { background: #1877F2; }
 
-.location-info h3 { margin-bottom: 15px; color: var(--white); }
-.icon-blue { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; display: block; }
-
-.map-wrapper {
-    margin-top: 20px;
+.map-box {
     border-radius: 20px;
     overflow: hidden;
-    border: 5px solid var(--white);
+    border: 4px solid white;
 }
 
-.main-footer {
-    text-align: center;
-    padding: 30px;
-    background: #000;
-    color: #888;
-    font-size: 0.9rem;
-}
+footer { background: #000; color: #555; text-align: center; padding: 20px; }
 
-/* --- تحسينات الشاشات الكبيرة (Desktop) --- */
-@media (min-width: 1024px) {
-    .nav-container { padding: 10px 50px; }
-    .logo-box img { height: 120px; } /* شعار أكبر في الكمبيوتر */
-    
-    .mobile-menu-btn { display: none; }
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
     
     .nav-links {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        width: auto;
-        box-shadow: none;
-        padding: 0;
-        background: transparent;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
     }
     
-    .nav-links a {
-        border-bottom: none;
-        padding: 0 20px;
-    }
-
-    .hero-slider { height: 85vh; }
-    .hero-text h2 { font-size: 4.5rem; }
+    .nav-links.active { display: flex; }
     
-    .working-hours-strip {
-        flex-direction: row;
-        font-size: 1.1rem;
-    }
+    .logo-box img { height: 70px; }
+    
+    .contact-wrapper { grid-template-columns: 1fr; }
+    
+    .features-grid { grid-template-columns: 1fr; }
+    
+    .work-bar { flex-direction: column; align-items: center; gap: 5px; }
 
-    .brands-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
-}
-
-/* تحسين للموبايلات الصغيرة جداً */
-@media (max-width: 480px) {
-    .logo-box img { height: 85px; }
-    .hero-text h2 { font-size: 1.8rem; }
+    .slide-content h1 { font-size: 1.8rem; }
 }
