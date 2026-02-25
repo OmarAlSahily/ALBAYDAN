@@ -1,0 +1,148 @@
+/* الألوان والخطوط */
+:root {
+    --primary-blue: #1E4D8C; /* اللون الأزرق من شعارك */
+    --dark-navy: #0F172A;
+    --accent-gray: #64748b;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: var(--dark-navy);
+}
+
+/* شريط التنقل */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box img {
+    height: 55px;
+    width: auto;
+}
+
+.brand-name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.brand-sub {
+    font-size: 10px;
+    color: var(--primary-blue);
+    letter-spacing: 2px;
+}
+
+/* الأزرار العائمة */
+.floating-social {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp { background: #25D366; }
+.facebook { background: #1877F2; }
+
+.floating-btn:hover { transform: scale(1.1); }
+
+/* قسم لماذا نحن؟ */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--dark-navy);
+}
+
+.title-line {
+    width: 80px;
+    height: 5px;
+    background: var(--primary-blue);
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid #eee;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--primary-blue);
+    background: #f8fafc;
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* الأزرار */
+.google-maps-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-blue);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.google-maps-btn:hover {
+    background: var(--dark-navy);
+    box-shadow: 0 5px 15px rgba(30, 77, 140, 0.4);
+}
+
+.map-btn {
+    background: var(--dark-navy);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* تذييل الصفحة */
+.footer {
+    background: var(--dark-navy);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
