@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة البيضان لاستيراد الإطارات والنضائد</title>
+    <title>شركة البيضان لاستيراد الإطارات والنضائد - v1.2</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,16 +11,22 @@
 <body>
 
     <div class="sticky-social">
-        <a href="https://wa.me/218910000000" class="s-btn s-wa" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://facebook.com/boshnaany/" class="s-btn s-fb" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/218910000000" class="s-btn s-wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com/boshnaany/" class="s-btn s-fb"><i class="fab fa-facebook-f"></i></a>
     </div>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-box">
-                <img src="AlBaydan.png" alt="شعار البيضان">
+            <div class="logo-area">
+                <img src="AlBaydan.png" alt="شعار البيضان" class="main-logo">
+                <div class="brand-text-wrapper">
+                    <span class="company-name-full">شركة الـبـيـضـان</span>
+                    <span class="company-slogan">لاستيراد الإطارات والنضائد وقطع غيار السيارات</span>
+                </div>
             </div>
+            
             <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#why-us">لماذا نحن؟</a></li>
@@ -30,36 +36,48 @@
         </div>
     </nav>
 
-    <section id="home" class="slider">
-        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2000');">
-            <div class="slide-content">
-                <h1>أقوى الإطارات العالمية</h1>
-                <p>وكيل معتمد لأرقى العلامات التجارية</p>
-            </div>
-        </div>
-        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2000');">
-            <div class="slide-content">
-                <h1>مرحباً بكم في مقرنا</h1>
-                <p>بنغازي - محلات نادي الهلال</p>
-            </div>
-        </div>
-    </section>
+    <header id="home" class="slider">
+        <div class="slide active" style="background-image: url('w1iSlbCEU76YSCm60qPv.jpg');"></div>
+        <div class="slide" style="background-image: url('Teaser_1024x610_UK.jpg');"></div>
+        <div class="slide" style="background-image: url('Lassa-Tyre-Ad.jpg');"></div>
+        <div class="slide" style="background-image: url('1669892769999.jfif');"></div>
+        <div class="slide" style="background-image: url('lassa-tiem-film-kapak_375x475px_1_11.jpg');"></div>
+    </header>
 
     <div class="work-bar">
         <div class="bar-item"><i class="far fa-clock"></i> 9:00 ص - 7:00 م</div>
         <div class="bar-item"><i class="fas fa-calendar-check"></i> طيلة أيام الأسبوع</div>
     </div>
 
-    <section id="why-us" class="section">
+    <section id="why-us" class="why-section">
         <div class="container">
             <div class="quote-area">
                 <i class="fas fa-quote-right quote-icon"></i>
                 <p class="main-quote">"نسعد بتقديم أفضل وأجود الإطارات والنضائد العالمية، لنضمن لك أداءً فائقاً وأماناً لا ينقطع على الطريق."</p>
                 <div class="line"></div>
             </div>
-            <div class="features-grid">
-                <div class="f-card"><i class="fas fa-shield-alt"></i><h3>ضمان حقيقي</h3></div>
-                <div class="f-card"><i class="fas fa-tools"></i><h3>تركيب احترافي</h3></div>
+
+            <div class="features-premium-grid">
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <h3>جودة معتمدة</h3>
+                    <p>نحن لا نرضى إلا بالأفضل، لذا نوفر إطارات ونضائد خاضعة لأعلى معايير الجودة الأوروبية والعالمية لضمان سلامتك وسلامة عائلتك.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fas fa-history"></i></div>
+                    <h3>خبرة عريقة</h3>
+                    <p>شركة البيضان (بوشنان) اسم له تاريخ في سوق قطع الغيار، بنينا ثقتنا عبر سنوات من تقديم البضاعة الأصلية والتعامل الصادق.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>تخزين احترافي</h3>
+                    <p>نولي أهمية قصوى لظروف التخزين؛ حيث يتم حفظ الإطارات في مخازن مهيأة بعيداً عن الرطوبة والحرارة العالية للحفاظ على مرونة المطاط.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>ضمان حقيقي</h3>
+                    <p>التزامنا لا ينتهي عند البيع، بل نقدم ضمانات فعلية على كافة المنتجات ضد عيوب التصنيع، مع خدمة ما بعد البيع المتميزة.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -95,6 +113,10 @@
         </div>
     </section>
 
+    <footer class="footer">
+        <p>© 2026 شركة البيضان | المقر الرئيسي: بنغازي</p>
+    </footer>
+
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
@@ -106,7 +128,7 @@
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }, 5000);
+        }, 4000);
     </script>
 </body>
 </html>
